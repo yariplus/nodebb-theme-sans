@@ -1,0 +1,16 @@
+{
+	"id": "nodebb-theme-sans",
+	"hooks": [
+	],
+	"scripts": [
+		"js/bootstrap.min.js",
+		"lib/sans.js",
+		"lib/modules/nprogress.js",
+		"lib/modules/autohidingnavbar.min.js",
+		"lib/modules/slideout.min.js",
+		"lib/client/chats.js"
+	],
+	"css": [
+		"css/bootstrap.min.css"
+	]
+}
