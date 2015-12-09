@@ -33,12 +33,14 @@
 	<script>
 		$(function(){
 			var nav = $('#nav');
-			$(window).scroll(function(){
-				if ($(this).scrollTop() > 192) {
-					nav.addClass('navbar-fixed-top');
-				}else{
-					nav.removeClass('navbar-fixed-top');
-				}
+			$(window).on('action:ajaxify.end', function(){
+				$(window).scroll(function(){
+					if ($(this).scrollTop() > 192) {
+						nav.addClass('navbar-fixed-top');
+					}else{
+						nav.removeClass('navbar-fixed-top');
+					}
+				});
 			});
 		});
 	</script>
