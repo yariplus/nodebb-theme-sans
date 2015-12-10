@@ -33,12 +33,18 @@
 	<script>
 		$(function(){
 			var nav = $('#nav');
+			var navbones = $('#navbones');
+			var bones = $('#navbones-bones');
 			$(window).on('action:ajaxify.end', function(){
 				$(window).scroll(function(){
 					if ($(this).scrollTop() > 192) {
 						nav.addClass('navbar-fixed-top');
+						navbones.addClass('navbones-fixed');
+						bones.css('top', 40);
 					}else{
 						nav.removeClass('navbar-fixed-top');
+						navbones.removeClass('navbones-fixed');
+						bones.css('top', -40);
 					}
 				});
 			});
@@ -59,6 +65,14 @@
 
 <div id="flair">
 	<span>Something</span>
+</div>
+
+<div id="navbones">
+	<div class="container">
+		<div id="navbones-container">
+			<div id="navbones-bones"></div>
+		</div>
+	</div>
 </div>
 
 <nav id="nav" class="navbar navbar-dark bg-primary">
